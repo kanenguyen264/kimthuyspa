@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Jost', 'Be Vietnam Pro', system-ui, sans-serif;
+    background-color: #FDFBF7;
+    color: #3A2D20;
+    overflow-x: hidden;
+  }
+
+  /* CSS variables — Kim Thủy Spa green theme */
+  :root {
+    --kt-green-d: #1B5E20;
+    --kt-green: #2E7D32;
+    --kt-green-bright: #6BAA2F;
+    --kt-green-light: #8BC34A;
+    --kt-bg: #F7FAF0;
+    --kt-bg-alt: #EAF3DC;
+    --kt-yellow: #F6C945;
+    --kt-yellow-dark: #E5B830;
+    --kt-wood: #8B6B3E;
+    --kt-text: #2B3A2B;
+    --kt-text-muted: #5E6B5E;
+  }
+
+  ::selection {
+    background-color: #DDBE86;
+    color: #FDFBF7;
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-vietnamese {
+    font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #DDBE86 0%, #C5A055 50%, #A8853E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 {
+    transition-delay: 0.15s;
+  }
+
+  .reveal-delay-2 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-delay-3 {
+    transition-delay: 0.45s;
+  }
+
+  .reveal-delay-4 {
+    transition-delay: 0.6s;
+  }
+
+  .reveal-delay-5 {
+    transition-delay: 0.75s;
+  }
+
+  .gold-line {
+    background: linear-gradient(90deg, transparent, #DDBE86 50%, transparent);
+  }
+
+  .gold-line-full {
+    background: linear-gradient(90deg, transparent 0%, #C5A055 20%, #DDBE86 50%, #C5A055 80%, transparent 100%);
+  }
+}
+
+@layer utilities {
+  .text-shadow-luxury {
+    text-shadow: 0 2px 20px rgba(58, 45, 32, 0.3);
+  }
+
+  .text-shadow-soft {
+    text-shadow: 0 1px 12px rgba(58, 45, 32, 0.15);
+  }
+
+  .bg-luxury-overlay {
+    background: linear-gradient(180deg, rgba(42, 32, 22, 0.5) 0%, rgba(42, 32, 22, 0.2) 40%, rgba(42, 32, 22, 0.6) 100%);
+  }
+
+  .bg-luxury-overlay-light {
+    background: linear-gradient(180deg, rgba(253, 251, 247, 0.1) 0%, rgba(253, 251, 247, 0.3) 100%);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF5EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #DDBE86, #A8853E);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8853E;
+}
