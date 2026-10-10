@@ -80,6 +80,9 @@ export function Booking() {
     setErrorMessage('');
 
     try {
+      if (!supabase) {
+        throw new Error('Hiện chưa nhận đặt lịch online. Vui lòng gọi điện trực tiếp để đặt lịch.');
+      }
       const { error } = await supabase.from('bookings').insert({
         name: form.name.trim(),
         phone: form.phone.trim(),
