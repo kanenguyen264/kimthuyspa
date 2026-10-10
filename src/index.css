@@ -147,3 +147,22 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #A8853E;
 }
+
+input[type='date'] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 2.75rem;
+  text-align: left;
+}
+
+input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.25rem;
+}
+
+input[type='date']::-webkit-datetime-edit {
+  padding: 0;
+}
